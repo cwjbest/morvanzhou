@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 import threading
 import time
 
@@ -8,7 +9,7 @@ def thread_job():
 
 def t1_job():
     print("T1 start\n")
-    time.sleep(1)
+    time.sleep(3)
     print("T1 finish\n")
 
 
@@ -28,10 +29,10 @@ def main():
     # added_thread = threading.Thread(target=thread_job())
     # added_thread.start()
 
-    t1_thread = threading.Thread(target=t1_job(), name="T1")
-    t2_thread = threading.Thread(target=t2_job(), name="T2")
-    # t1_thread.start()
-    # t2_thread.start()
+    t1_thread = threading.Thread(target=t1_job, name="T1")
+    t2_thread = threading.Thread(target=t2_job, name="T2")
+    t1_thread.start()
+    t2_thread.start()
     # t1_thread.join()
     print("all done")
 
