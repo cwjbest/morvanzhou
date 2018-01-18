@@ -1,3 +1,4 @@
+# coding:UTF-8
 import tkinter as tk
 
 
@@ -24,4 +25,5 @@ def hit_me():
 b = tk.Button(window, text='hit me', width=15, height=2, command=hit_me)
 b.pack()
 
+# 这一句很重要，让window出现
 window.mainloop()
