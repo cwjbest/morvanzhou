@@ -31,7 +31,7 @@ sess.run(init)
 
 # 4. training data
 start_time = time.time()
-for step in range(1001):
+for step in range(1000):
     sess.run(train)
     if step % 20 == 0:
         print (step, sess.run(Weights), sess.run(biases))
